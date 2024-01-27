@@ -26,7 +26,7 @@ const ImageList = [
     id: 3,
     img: Book3,
     autor:"Alice Oseman",
-    title: "Heartstopper 5",
+    title: "Heartstopper Vol.5",
     description:
       "Verá a los protagonistas mirando hacia el futuro a medida que se acerca el verano. Charlie, el protagonista, ha estado trabajando en su salud.",
   },
@@ -36,7 +36,7 @@ const ImageList = [
 const Hero = () => {
   const [imageId , setImageId] = useState(Book1);
   const [title,  setTitle]= useState("Sombras Sutiles De Bambú");
-  const [autor,  setAutor]= useState("Anonimo");
+  const [autor,  setAutor]= useState("Anna Llauradó");
   const [description, setDescription] = useState("Este libro valiente demuestra el poder de la escritura para comprender y superar los dramas que comprometen la vida.");
   const bgImage = {
     backgroundImage:`url(${Vector})`,
