@@ -8,31 +8,30 @@ import Testimonial from "./components/Testimonial/Testimonial";
 import Footer from "./components/Footer/Footer.jsx";
 import Services from "./components/Services/Services.jsx";
 import AOS from "aos";
-import "aos/dist/aos.css"
- 
-const App = () => {
+import "aos/dist/aos.css";
 
-React.useEffect(()=>{AOS.init({
+const App = () => {
+  React.useEffect(() => {
+    AOS.init({
       Offset: 100,
       duration: 800,
       easing: "ease-in-sine",
       delay: 100,
-});AOS.refresh();
-}, []);
-
-
+    });
+    AOS.refresh();
+  }, []);
 
   return (
     <div>
       <Navbar />
       <Hero />
       <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
-      <Services/>
-      <Banner/>
-      <AppStoreBanner />
-      <Books/>
-      <Testimonial/>
-      <Footer/>
+        <Services />
+        <Banner />
+        <AppStoreBanner />
+        <Books />
+        <Testimonial />
+        <Footer />
       </div>
     </div>
   );

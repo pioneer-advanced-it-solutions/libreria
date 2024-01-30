@@ -1,10 +1,6 @@
-import React from "react";
-// import BooksStack from "../../assets/website/books-stack.png";
 import BooksStack from "../../assets/website/library.jpg";
 import Vector from "../../assets/vector3.png";
 import { GrSecure } from "react-icons/gr";
-import { IoFastFood } from "react-icons/io5";
-import { GiFoodTruck } from "react-icons/gi";
 
 const Banner = () => {
   const bgImage = {
@@ -14,10 +10,11 @@ const Banner = () => {
     backgroundSize: "cover",
     height: "100%",
     width: "100%",
+    filter: "brightness(1)",
   };
   return (
     <>
-      <div className="min-h-[550px]">
+      <div className="min-h-[550px] " style={bgImage}>
         <div className="min-h-[550px] flex justify-center items-center backdrop-blur-xl py-12 sm:py-0 ">
           <div data-aos="slide-up" className="container">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
@@ -46,15 +43,15 @@ const Banner = () => {
                     <p>Libros de calidad</p>
                   </div>
                   <div className="flex items-center gap-4">
-                    <IoFastFood className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-orange-100 dark:bg-orange-400" />
+                    <GrSecure className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-orange-100 dark:bg-orange-400" />
                     <p>Entrega rapida</p>
                   </div>
                   <div className="flex items-center gap-4">
-                    <GiFoodTruck className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-green-100 dark:bg-green-400" />
+                    <GrSecure className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-green-100 dark:bg-green-400" />
                     <p>Todos los metodos de pago</p>
                   </div>
                   <div className="flex items-center gap-4">
-                    <GiFoodTruck className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-yellow-100 dark:bg-yellow-400" />
+                    <GrSecure className="text-4xl h-12 w-12 shadow-sm p-4 rounded-full bg-yellow-100 dark:bg-yellow-400" />
                     <p>Feria de libros y saldos</p>
                   </div>
                 </div>

@@ -20,7 +20,7 @@ const AppStoreBanner = () => {
       <div data-aos="slide-up" className="container">
         <div className="space-y-6 max-w-xl mx-auto">
           <h1 className="text-2xl text-center sm:text-2xl font -semibold">
-          Tu libreria en todo lugar
+            Tu libreria en todo lugar
           </h1>
           <div className="flex flex-wrap justify-center items-center gap-4">
             <a href="#">
