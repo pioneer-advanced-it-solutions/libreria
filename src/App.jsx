@@ -4,6 +4,7 @@ import AppStoreBanner from "./components/AppStoreBanner/AppStoreBanner";
 import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
 import Testimonial from "./components/Testimonial/Testimonial";
+import Footer from "./components/Footer/Footer.jsx";
 const App = () => {
   return (
     <div>
@@ -13,6 +14,7 @@ const App = () => {
       <AppStoreBanner />
       <Books/>
       <Testimonial/>
+      <Footer/>
       </div>
     </div>
   );
