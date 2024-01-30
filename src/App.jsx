@@ -9,6 +9,7 @@ import Footer from "./components/Footer/Footer.jsx";
 import Services from "./components/Services/Services.jsx";
 import AOS from "aos";
 import "aos/dist/aos.css"
+import SliderC from "./components/Slider/SliderC.jsx";
  
 const App = () => {
 
@@ -27,6 +28,7 @@ React.useEffect(()=>{AOS.init({
       <Navbar />
       <Hero />
       <div className="bg-white dark:bg-gray-900 dark:text-white duration-200">
+      <SliderC/>
       <Services/>
       <Banner/>
       <AppStoreBanner />
