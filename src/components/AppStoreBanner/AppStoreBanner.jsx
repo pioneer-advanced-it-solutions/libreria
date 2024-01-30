@@ -17,7 +17,7 @@ const AppStoreBanner = () => {
       className="bg-gray-100 dark:bg-gray-800 text-white py-10"
       style={bannerImg}
     >
-      <div className="container">
+      <div data-aos="slide-up" className="container">
         <div className="space-y-6 max-w-xl mx-auto">
           <h1 className="text-2xl text-center sm:text-2xl font -semibold">
           Tu libreria en todo lugar

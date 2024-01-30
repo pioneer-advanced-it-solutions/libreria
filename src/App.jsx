@@ -7,7 +7,21 @@ import Navbar from "./components/Navbar/Navbar";
 import Testimonial from "./components/Testimonial/Testimonial";
 import Footer from "./components/Footer/Footer.jsx";
 import Services from "./components/Services/Services.jsx";
+import AOS from "aos";
+import "aos/dist/aos.css"
+ 
 const App = () => {
+
+React.useEffect(()=>{AOS.init({
+      Offset: 100,
+      duration: 800,
+      easing: "ease-in-sine",
+      delay: 100,
+});AOS.refresh();
+}, []);
+
+
+
   return (
     <div>
       <Navbar />
