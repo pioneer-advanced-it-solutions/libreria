@@ -10,23 +10,28 @@ const Menu = [
     link: "/#",
   },
   {
-    id: 2,
+    id: 1,
     name: "Los más vendidos",
     link: "/#services",
+  },
+  {
+    id: 1,
+    name: "Testimonios",
+    link: "/#testimonios",
   },
 ];
 
 const DropdownLinks = [
   {
-    name: "Libros de estrenos",
+    name: "Todos los libros",
     link: "/#",
   },
   {
-    name: "Los más vendidos",
+    name: "Juegos didacticos",
     link: "/#",
   },
   {
-    name: "Autores",
+    name: "Manga y Comics",
     link: "/#",
   },
 ];
@@ -62,7 +67,7 @@ const Navbar = () => {
               {/* dropdown section */}
               <li className="group relative cursor-pointer">
                 <a href="" className="flex h-[72px] items-center gap[2px]">
-                  Atajos
+                  Tienda
                   <span>
                     <FaCaretDown className="transition duration-300 group-hover:rotate-180" />
                   </span>
