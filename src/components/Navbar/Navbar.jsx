@@ -2,6 +2,8 @@ import Logo from "../../assets/website/logo.png";
 import { FaCaretDown } from "react-icons/fa6";
 import { FaCartShopping } from "react-icons/fa6";
 import DarkMode from "./DarkMode";
+import { FaUser } from "react-icons/fa";
+import { useState } from "react";
 
 const Menu = [
   {
@@ -14,7 +16,6 @@ const Menu = [
     name: "Los más vendidos",
     link: "/#services",
   },
-  
 ];
 
 const DropdownLinks = [
@@ -33,8 +34,12 @@ const DropdownLinks = [
 ];
 
 const Navbar = () => {
+  const [cartCount, setCartCount] = useState(0);
+  const incrementCartCount = () => {
+    setCartCount(cartCount + 1);
+  };
   return (
-    <div className="shadow-lg bg-white dark:bg-gray-900 dark:text-white duration 200">
+    <div className="fixed top-0 left-0 w-full z-50 shadow-lg bg-white dark:bg-gray-900 dark:text-white duration 200">
       <div className="container py-3 sm:py-0">
         <div className="flex justify-between items-center">
           <div>
@@ -85,9 +90,18 @@ const Navbar = () => {
                 </div>
               </li>
             </ul>
-            <button className="bg-gradient-to-r from-primary to-secondary text-white px-4 py-1 rounded-full flex items-center gap-3 hover:scale-105 duration-300">
-              Comprar{" "}
+            <button
+              className="bg-gradient-to-r from-primary to-secondary text-white px-4 py-1 rounded-full flex items-center gap-3 hover:scale-105 duration-300 relative"
+              onClick={incrementCartCount}
+            >
+              Comprar
               <FaCartShopping className="text-xl text-white drop-shadow-sm cursor-pointer" />
+              <span className="bg-rgba text-white rounded-full px-2 py-1 text-xs absolute top-2 right-0 transform translate-x-1/2 -translate-y-1/2">
+                {cartCount}
+              </span>
+            </button>
+            <button className="bg-gradient-to-r from-primary to-secondary text-white px-4 py-1 rounded-full flex items-center gap-3 hover:scale-105 duration-300">
+              <FaUser className="text-xl text-white drop-shadow-xl cursor-pointer" />
             </button>
           </div>
         </div>

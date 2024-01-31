@@ -9,6 +9,7 @@ export default {
         secondary: "#2aa6df",
         dark: "#1e1e1e",
         light: "#f5f5f5",
+        rgba: "rgba(255, 93, 179, 1)",
       },
 
       container: {
