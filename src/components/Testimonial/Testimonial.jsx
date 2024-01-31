@@ -62,15 +62,10 @@ const Testimonial = () => {
 
   return (
     <>
-      <span id="testimonios"></span>
       <div data-aos="zoom-in" data-aos-duration="300" className="py-10">
         <div className="container">
           <div className="text-center mb-20 max-w-[600px] mx-auto">
-            <p
-              className="text-sm bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary"
-              data-aos="zoom-in"
-              data-aos-duration="300"
-            >
+            <p className="text-sm bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
               La opinión de nuestros clientes
             </p>
             <h1 className="text-3xl font-bold">Testimonios</h1>

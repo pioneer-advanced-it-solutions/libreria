@@ -14,11 +14,7 @@ const Menu = [
     name: "Los más vendidos",
     link: "/#services",
   },
-  {
-    id: 1,
-    name: "Testimonios",
-    link: "/#testimonios",
-  },
+  
 ];
 
 const DropdownLinks = [

@@ -1,4 +1,3 @@
-import React from "react";
 import Img1 from "../../assets/books/book2.jpg";
 import Img2 from "../../assets/books/book1.jpg";
 import Img3 from "../../assets/books/book3.jpg";
@@ -28,7 +27,7 @@ const ServicesData = [
   },
 ];
 
-const Services = ({ handleOrderPopup }) => {
+const Services = () => {
   return (
     <>
       <span id="services"></span>
@@ -48,6 +47,7 @@ const Services = ({ handleOrderPopup }) => {
             {ServicesData.map((service) => (
               <div
                 data-aos="zoom-in"
+                key={service}
                 className="rounded-2xl bg-white dark:bg-gray-800 hover:bg-primary dark:hover:bg-primary hover:text-white relative shadow-xl duration-high group max-w-[300px]"
               >
                 <div className="h-[100px]">
@@ -71,7 +71,7 @@ const Services = ({ handleOrderPopup }) => {
                   </p>
                   <button
                     className="bg-primary hover:scale-105 duration-300 text-white py-1 px-4 rounded-full mt-4 group-hover:bg-white group-hover:text-primary"
-                    onClick={handleOrderPopup}
+                    
                   >
                     Compra ahora
                   </button>

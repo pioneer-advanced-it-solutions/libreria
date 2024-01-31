@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import {
   FaFacebook,
   FaInstagram,
@@ -37,9 +36,7 @@ const Footer = () => {
               <img src={footerLogo} alt="Logo" className="max-w-[50px]" />
               Books Store
             </h1>
-            <p className="">
-              La mejor libreria de la zona.{" "}
-            </p>
+            <p className="">La mejor libreria de la zona. </p>
             <br />
             <div className="flex items-center gap-3">
               <FaLocationArrow />
@@ -71,7 +68,10 @@ const Footer = () => {
                 </h1>
                 <ul className={`flex flex-col gap-3`}>
                   {FooterLinks.map((link) => (
-                    <li className="cursor-pointer hover:translate-x-1 duration-300 hover:text-primary space-x-1 text-gray-500">
+                    <li
+                      key={link}
+                      className="cursor-pointer hover:translate-x-1 duration-300 hover:text-primary space-x-1 text-gray-500"
+                    >
                       <span>&#11162;</span>
                       <span>{link.title}</span>
                     </li>
@@ -86,7 +86,10 @@ const Footer = () => {
                 </h1>
                 <ul className="flex flex-col gap-3">
                   {FooterLinks.map((link) => (
-                    <li className="cursor-pointer hover:translate-x-1 duration-300 hover:text-primary space-x-1 text-gray-500">
+                    <li
+                      key={link}
+                      className="cursor-pointer hover:translate-x-1 duration-300 hover:text-primary space-x-1 text-gray-500"
+                    >
                       <span>&#11162;</span>
                       <span>{link.title}</span>
                     </li>
@@ -97,12 +100,12 @@ const Footer = () => {
             <div className="">
               <div className="py-8 px-4 ">
                 <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
-                Ubicación
+                  Ubicación
                 </h1>
                 {/* <ul className="list-disc list-inside"> */}
                 <ul className="flex flex-col gap-3">
                   {FooterLinks.map((link) => (
-                    <li className="cursor-pointer hover:translate-x-1 duration-300 hover:text-primary space-x-1 text-gray-500">
+                    <li key={link} className="cursor-pointer hover:translate-x-1 duration-300 hover:text-primary space-x-1 text-gray-500">
                       <span>&#11162;</span>
                       <span>{link.title}</span>
                     </li>
@@ -114,7 +117,8 @@ const Footer = () => {
         </div>
         <div>
           <div className="text-center py-10 border-t-2 border-gray-300/50">
-            @copyright 2024 todos los derechos reservados || Alexis Isla y Lucas Corbalan
+            @copyright 2024 todos los derechos reservados || Alexis Isla y Lucas
+            Corbalan
           </div>
         </div>
       </section>

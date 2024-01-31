@@ -1,4 +1,3 @@
-import React from "react";
 // import BooksStack from "../../assets/website/books-stack.png";
 import BooksStack from "../../assets/website/library.jpg";
 import Vector from "../../assets/vector3.png";
