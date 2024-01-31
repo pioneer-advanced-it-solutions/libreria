@@ -14,7 +14,7 @@ const Banner = () => {
   };
   return (
     <>
-      <div className="min-h-[550px] " style={bgImage}>
+      <div className="min-h-[550px] ">
         <div className="min-h-[550px] flex justify-center items-center backdrop-blur-xl py-12 sm:py-0 ">
           <div data-aos="slide-up" className="container">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
