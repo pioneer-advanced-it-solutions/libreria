@@ -40,8 +40,7 @@ const Services = ({ handleOrderPopup }) => {
             </p>
             <h1 className="text-3xl font-bold">Los mejores libros</h1>
             <p className="text-xs text-gray-400">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Perspiciatis delectus architecto error nesciunt,
+            Acá podés encontrar los libros preferidos por la critica.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 md:gap-5 place-items-center">

@@ -35,9 +35,7 @@ const Banner = () => {
                   Tu libreria en todo lugar
                 </h1>
                 <p className="text-sm text-gray-500 tracking-wide leading-5">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Eaque reiciendis inventore iste ratione ex alias quis magni at
-                  optio
+                Acompañamos el placer de tu lectura, en cualquier lugar del país en el que te encuentres o podes encontrarnos en nuestra sucursal de General Roca.
                   <br />
                 </p>
                 <div className="flex flex-col gap-4">
