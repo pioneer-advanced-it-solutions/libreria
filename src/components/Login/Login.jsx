@@ -15,8 +15,8 @@ const Login = () => {
   };
 
   return (
-    <div className="dark:bg-gray-950 dark:text-white">
-      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold ">
+    <div>
+      <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold dark:text-white ">
         Iniciar Sesión Administrador
       </h1>
       {loggedIn ? (
