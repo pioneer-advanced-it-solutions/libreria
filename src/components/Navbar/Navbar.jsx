@@ -45,6 +45,10 @@ const Navbar = () => {
     setShowMobileMenu(!showMobileMenu);
   };
 
+  const handleLinkClick = () => {
+    setShowMobileMenu(false); // Cierra el menú al hacer clic en un enlace
+  };
+
   return (
     <div className="fixed top-0 left-0 w-full z-50 shadow-lg bg-white dark:bg-gray-900 dark:text-white duration 200">
       <div className="container py-3 sm:py-0">
@@ -67,6 +71,7 @@ const Navbar = () => {
                   <a
                     href={menu.link}
                     className="inline-block py-4 px-4 hover:text-primary duration-200"
+                    onClick={handleLinkClick}
                   >
                     {menu.name}
                   </a>
@@ -88,6 +93,7 @@ const Navbar = () => {
                         <a
                           href={data.link}
                           className="inline-block w-full rounded-md p-2 hover:bg-primary/20"
+                          onClick={handleLinkClick}
                         >
                           {data.name}
                         </a>
@@ -128,6 +134,7 @@ const Navbar = () => {
                   <a
                     href={menu.link}
                     className="inline-block py-2 px-4 hover:text-primary duration-200"
+                    onClick={handleLinkClick}
                   >
                     {menu.name}
                   </a>
@@ -138,6 +145,7 @@ const Navbar = () => {
                   <a
                     href={data.link}
                     className="inline-block py-2 px-4 hover:text-primary duration-200"
+                    onClick={handleLinkClick}
                   >
                     {data.name}
                   </a>
