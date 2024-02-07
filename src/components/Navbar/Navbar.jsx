@@ -4,6 +4,7 @@ import { FaCartShopping } from "react-icons/fa6";
 import DarkMode from "./DarkMode";
 import { FaUser } from "react-icons/fa";
 import { useState } from "react";
+import ShoppingCard from "../ShoppingCard/ShoppingCard";
 
 const Menu = [
   {
@@ -156,7 +157,9 @@ const Navbar = () => {
         )}
       </div>
       {showCart && (
-        <div className="fixed top-15 right-0 h-[40rem] w-full md:w-2/3 bg-gray-100 text-gray-900 text-white shadow-md rounded-lg p-4 dark:bg-gray-900 dark:text-white border border-primary dark:border-rgba"></div>
+        <div className="fixed top-19 right-0 h-[40rem] w-full md:w-1/2 bg-gray-100 text-gray-900 text-white shadow-md rounded-lg p-4 dark:bg-gray-900 dark:text-white border border-primary dark:border-rgba">
+          <ShoppingCard />
+        </div>
       )}
     </div>
   );
