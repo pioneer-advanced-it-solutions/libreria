@@ -5,6 +5,7 @@ import DarkMode from "./DarkMode";
 import { FaUser } from "react-icons/fa";
 import { useState } from "react";
 import ShoppingCard from "../ShoppingCard/ShoppingCard";
+import Login from "../Login/Login";
 
 const Menu = [
   {
@@ -37,9 +38,14 @@ const DropdownLinks = [
 const Navbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [showCart, setShowCart] = useState(false);
+  const [showLogin, setshowLogin] = useState(false);
 
   const toggleCart = () => {
     setShowCart(!showCart);
+  };
+
+  const toggleCartLogin = () => {
+    setshowLogin(!showLogin);
   };
 
   const toggleMobileMenu = () => {
@@ -114,7 +120,10 @@ const Navbar = () => {
               <span className="bg-rgba text-white rounded-full px-2 py-1 text-xs absolute top-2 right-0 transform translate-x-1/2 -translate-y-1/2"></span>
             </button>
             <button className="bg-gradient-to-r from-primary to-secondary text-white px-4 py-1 rounded-full flex items-center gap-3 hover:scale-105 duration-300">
-              <FaUser className="text-xl text-white drop-shadow-xl cursor-pointer" />
+              <FaUser
+                className="text-xl text-white drop-shadow-xl cursor-pointer"
+                onClick={toggleCartLogin}
+              />
             </button>
             <div>
               <button
@@ -156,9 +165,16 @@ const Navbar = () => {
           </div>
         )}
       </div>
+      {/* modal carrito*/}
       {showCart && (
         <div className="fixed top-19 right-0 h-[40rem] w-full md:w-1/2 bg-gray-100 text-gray-900 text-white shadow-md rounded-lg p-4 dark:bg-gray-900 dark:text-white border border-primary dark:border-rgba">
           <ShoppingCard />
+        </div>
+      )}
+      {/* modal login*/}
+      {showLogin && (
+        <div className="fixed top-19 right-0 h-[40rem] w-full md:w-1/2 bg-gray-100 text-gray-900 text-white shadow-md rounded-lg p-4 dark:bg-gray-900 dark:text-white border border-primary dark:border-rgba">
+          <Login />
         </div>
       )}
     </div>
