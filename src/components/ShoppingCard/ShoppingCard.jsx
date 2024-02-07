@@ -1,6 +1,6 @@
 const ShoppingCard = () => {
   return (
-    <div>
+    <div className="dark:bg-gray-950 dark:text-white">
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold">
         Carrito de Compras
       </h1>
