@@ -34,15 +34,17 @@ const DropdownLinks = [
 ];
 
 const Navbar = () => {
-  const [cartCount, setCartCount] = useState(0);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
-  const incrementCartCount = () => {
-    setCartCount(cartCount + 1);
+  const [showCart, setShowCart] = useState(false);
+
+  const toggleCart = () => {
+    setShowCart(!showCart);
   };
 
   const toggleMobileMenu = () => {
     setShowMobileMenu(!showMobileMenu);
   };
+
   return (
     <div className="fixed top-0 left-0 w-full z-50 shadow-lg bg-white dark:bg-gray-900 dark:text-white duration 200">
       <div className="container py-3 sm:py-0">
@@ -98,13 +100,11 @@ const Navbar = () => {
 
             <button
               className="bg-gradient-to-r from-primary to-secondary text-white px-4 py-1 rounded-full flex items-center gap-3 hover:scale-105 duration-300 relative"
-              onClick={incrementCartCount}
+              onClick={toggleCart}
             >
               <span className="hidden sm:block">Comprar</span>
               <FaCartShopping className="text-xl text-white drop-shadow-sm cursor-pointer" />
-              <span className="bg-rgba text-white rounded-full px-2 py-1 text-xs absolute top-2 right-0 transform translate-x-1/2 -translate-y-1/2">
-                {cartCount}
-              </span>
+              <span className="bg-rgba text-white rounded-full px-2 py-1 text-xs absolute top-2 right-0 transform translate-x-1/2 -translate-y-1/2"></span>
             </button>
             <button className="bg-gradient-to-r from-primary to-secondary text-white px-4 py-1 rounded-full flex items-center gap-3 hover:scale-105 duration-300">
               <FaUser className="text-xl text-white drop-shadow-xl cursor-pointer" />
@@ -147,6 +147,9 @@ const Navbar = () => {
           </div>
         )}
       </div>
+      {showCart && (
+        <div className="fixed top-15 right-0 h-[40rem] w-full md:w-2/3 bg-gray-100 text-gray-900 text-white shadow-md rounded-lg p-4 dark:bg-gray-900 dark:text-white border border-primary dark:border-rgba"></div>
+      )}
     </div>
   );
 };
