@@ -4,19 +4,19 @@ const testimonialData = [
   {
     id: 1,
     name: "Victor",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    text: "El mejor trato, los mejores libros",
     img: "https://picsum.photos/101/101",
   },
   {
     id: 2,
     name: "Satya Narayan",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    text: "Exelente servicio",
     img: "https://picsum.photos/102/102",
   },
   {
     id: 3,
     name: "Sachin Tendulkar",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque reiciendis inventore iste ratione ex alias quis magni at optio",
+    text: "Todos los libros que quiero en un solo lugar",
     img: "https://picsum.photos/103/103",
   },
 ];
@@ -70,8 +70,7 @@ const Testimonial = () => {
             </p>
             <h1 className="text-3xl font-bold">Testimonios</h1>
             <p className="text-xs text-gray-400">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Perspiciatis delectus architecto error nesciunt,
+             Acá te dejamos la opinión de nuestros queridos clientes
             </p>
           </div>
           <div
