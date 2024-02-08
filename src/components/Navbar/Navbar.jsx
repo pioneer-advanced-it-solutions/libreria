@@ -3,7 +3,7 @@ import { FaBars, FaCaretDown } from "react-icons/fa6";
 import { FaCartShopping } from "react-icons/fa6";
 import DarkMode from "./DarkMode";
 import { FaUser } from "react-icons/fa";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ShoppingCard from "../ShoppingCard/ShoppingCard";
 import Login from "../Login/Login";
 
@@ -38,14 +38,34 @@ const DropdownLinks = [
 const Navbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [showCart, setShowCart] = useState(false);
-  const [showLogin, setshowLogin] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
+
+  const cartRef = useRef(null);
+  const loginRef = useRef(null);
+
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (cartRef.current && !cartRef.current.contains(event.target)) {
+        setShowCart(false);
+      }
+      if (loginRef.current && !loginRef.current.contains(event.target)) {
+        setShowLogin(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, []);
 
   const toggleCart = () => {
     setShowCart(!showCart);
   };
 
-  const toggleCartLogin = () => {
-    setshowLogin(!showLogin);
+  const toggleLogin = () => {
+    setShowLogin(!showLogin);
   };
 
   const toggleMobileMenu = () => {
@@ -61,7 +81,7 @@ const Navbar = () => {
       <div className="container py-3 sm:py-0">
         <div className="flex justify-between items-center">
           <div>
-            <a href="" className="font-bold text-2x1 sm:text-3x1 flex gap-4">
+            <a href="" className="font-bold text-2xl sm:text-3xl flex gap-4">
               <img src={Logo} alt="" className="w-10" />
               <h1 className="flex flex-col">
                 Libreria <span>DeLaFe</span>
@@ -86,14 +106,14 @@ const Navbar = () => {
               ))}
               {/* dropdown section */}
               <li className="group relative cursor-pointer">
-                <a href="" className="flex h-[72px] items-center gap[2px]">
+                <a href="" className="flex h-[72px] items-center gap-2">
                   Tienda
                   <span>
                     <FaCaretDown className="transition duration-300 group-hover:rotate-180" />
                   </span>
                 </a>
                 {/* drop link section  */}
-                <div className="absolute -left-9 z-[10] hidden group-hover:block text-black bg-white p-2 shadow-md w-[200px]">
+                <div className="absolute -left-9 z-10 hidden group-hover:block text-black bg-white p-2 shadow-md w-[200px]">
                   <ul>
                     {DropdownLinks.map((data) => (
                       <li key={data.id}>
@@ -112,6 +132,7 @@ const Navbar = () => {
             </ul>
 
             <button
+              ref={cartRef}
               className="bg-gradient-to-r from-primary to-secondary text-white px-4 py-1 rounded-full flex items-center gap-3 hover:scale-105 duration-300 relative"
               onClick={toggleCart}
             >
@@ -119,11 +140,12 @@ const Navbar = () => {
               <FaCartShopping className="text-xl text-white drop-shadow-sm cursor-pointer" />
               <span className="bg-rgba text-white rounded-full px-2 py-1 text-xs absolute top-2 right-0 transform translate-x-1/2 -translate-y-1/2"></span>
             </button>
-            <button className="bg-gradient-to-r from-primary to-secondary text-white px-4 py-1 rounded-full flex items-center gap-3 hover:scale-105 duration-300">
-              <FaUser
-                className="text-xl text-white drop-shadow-xl cursor-pointer"
-                onClick={toggleCartLogin}
-              />
+            <button
+              ref={loginRef}
+              className="bg-gradient-to-r from-primary to-secondary text-white px-4 py-1 rounded-full flex items-center gap-3 hover:scale-105 duration-300"
+              onClick={toggleLogin}
+            >
+              <FaUser className="text-xl text-white drop-shadow-xl cursor-pointer" />
             </button>
             <div>
               <button
