@@ -167,13 +167,13 @@ const Navbar = () => {
       </div>
       {/* modal carrito*/}
       {showCart && (
-        <div className="fixed top-19 right-0 h-[40rem] w-full md:w-1/2 bg-gray-100 text-gray-900 text-white shadow-md rounded-lg p-4 dark:bg-gray-900 dark:text-white border border-primary dark:border-rgba">
+        <div className="fixed top-19 right-0 h-[40rem] w-full md:w-1/2 bg-gray-200 text-gray-900 shadow-md rounded-lg p-4 dark:bg-gray-900 dark:text-white border border-primary dark:border-rgba">
           <ShoppingCard />
         </div>
       )}
       {/* modal login*/}
       {showLogin && (
-        <div className="fixed top-19 right-0 h-[40rem] w-full md:w-1/2 bg-gray-100 text-gray-900 text-white shadow-md rounded-lg p-4 dark:bg-gray-900 dark:text-white border border-primary dark:border-rgba">
+        <div className="fixed top-19 right-0 h-[40rem] w-full md:w-1/2 bg-gray-200 text-gray-900 shadow-md rounded-lg p-4 dark:bg-gray-900 dark:text-white border border-primary dark:border-rgba">
           <Login />
         </div>
       )}
