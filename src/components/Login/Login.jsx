@@ -15,7 +15,7 @@ const Login = () => {
   };
 
   return (
-    <div >
+    <div>
       <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold ">
         Iniciar Sesión Administrador
       </h1>
@@ -37,7 +37,7 @@ const Login = () => {
               id="username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              className="mt-1 p-2 block w-full border border-gray-400 rounded-md focus:outline-none focus:ring-sky-500 focus:border-sky-500"
+              className="mt-1 p-2 block w-full border border-gray-400 rounded-md focus:outline-none focus:ring-sky-500 focus:border-sky-500 dark:text-gray-700 font-medium "
               required
             />
           </div>
@@ -53,7 +53,7 @@ const Login = () => {
               id="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="mt-1 p-2 block w-full border border-gray-400 rounded-md focus:outline-none focus:ring-sky-500 focus:border-sky-500"
+              className="mt-1 p-2 block w-full border border-gray-400 rounded-md focus:outline-none focus:ring-sky-500 focus:border-sky-500 dark:text-gray-700"
               required
             />
           </div>

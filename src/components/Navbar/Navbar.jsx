@@ -132,7 +132,6 @@ const Navbar = () => {
             </ul>
 
             <button
-              ref={cartRef}
               className="bg-gradient-to-r from-primary to-secondary text-white px-4 py-1 rounded-full flex items-center gap-3 hover:scale-105 duration-300 relative"
               onClick={toggleCart}
             >
@@ -141,7 +140,7 @@ const Navbar = () => {
               <span className="bg-rgba text-white rounded-full px-2 py-1 text-xs absolute top-2 right-0 transform translate-x-1/2 -translate-y-1/2"></span>
             </button>
             <button
-              ref={loginRef}
+            
               className="bg-gradient-to-r from-primary to-secondary text-white px-4 py-1 rounded-full flex items-center gap-3 hover:scale-105 duration-300"
               onClick={toggleLogin}
             >
@@ -189,13 +188,19 @@ const Navbar = () => {
       </div>
       {/* modal carrito*/}
       {showCart && (
-        <div className="fixed top-19 right-0 h-[40rem] w-full md:w-1/2 bg-gray-200 text-gray-900 shadow-md rounded-lg p-4 dark:bg-gray-900 dark:text-white border border-primary dark:border-rgba">
+        <div
+          ref={cartRef}
+          className="fixed top-19 right-0 h-[40rem] w-full md:w-1/2 bg-gray-200 text-gray-900 shadow-md rounded-lg p-4 dark:bg-gray-900 dark:text-white border border-primary dark:border-rgba"
+        >
           <ShoppingCard />
         </div>
       )}
       {/* modal login*/}
       {showLogin && (
-        <div className="fixed top-19 right-0 h-[40rem] w-full md:w-1/2 bg-gray-200 text-gray-900 shadow-md rounded-lg p-4 dark:bg-gray-900 dark:text-white border border-primary dark:border-rgba">
+        <div
+          ref={loginRef}
+          className="fixed top-19 right-0 h-[40rem] w-full md:w-1/2 bg-gray-200 text-gray-900 shadow-md rounded-lg p-4 dark:bg-gray-900 dark:text-white border border-primary dark:border-rgba"
+        >
           <Login />
         </div>
       )}
