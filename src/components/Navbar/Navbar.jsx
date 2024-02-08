@@ -45,10 +45,11 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleOutsideClick = (event) => {
-      if (cartRef.current && !cartRef.current.contains(event.target)) {
+      if (
+        !cartRef.current.contains(event.target) &&
+        !loginRef.current.contains(event.target)
+      ) {
         setShowCart(false);
-      }
-      if (loginRef.current && !loginRef.current.contains(event.target)) {
         setShowLogin(false);
       }
     };
@@ -61,15 +62,17 @@ const Navbar = () => {
   }, []);
 
   const toggleCart = () => {
-    setShowCart(!showCart);
+    setShowLogin(false);
+    setShowCart((prevShowCart) => !prevShowCart);
   };
 
   const toggleLogin = () => {
-    setShowLogin(!showLogin);
+    setShowCart(false);
+    setShowLogin((prevShowLogin) => !prevShowLogin);
   };
 
   const toggleMobileMenu = () => {
-    setShowMobileMenu(!showMobileMenu);
+    setShowMobileMenu((prevShowMobileMenu) => !prevShowMobileMenu);
   };
 
   const handleLinkClick = () => {
@@ -77,7 +80,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full z-50 shadow-lg bg-white dark:bg-gray-900 dark:text-white duration 200">
+    <div className="fixed top-0 left-0 w-full z-50 shadow-lg bg-white dark:bg-gray-900 dark:text-white duration-200">
       <div className="container py-3 sm:py-0">
         <div className="flex justify-between items-center">
           <div>
@@ -104,7 +107,6 @@ const Navbar = () => {
                   </a>
                 </li>
               ))}
-              {/* dropdown section */}
               <li className="group relative cursor-pointer">
                 <a href="" className="flex h-[72px] items-center gap-2">
                   Tienda
@@ -112,7 +114,6 @@ const Navbar = () => {
                     <FaCaretDown className="transition duration-300 group-hover:rotate-180" />
                   </span>
                 </a>
-                {/* drop link section  */}
                 <div className="absolute -left-9 z-10 hidden group-hover:block text-black bg-white p-2 shadow-md w-[200px]">
                   <ul>
                     {DropdownLinks.map((data) => (
@@ -130,9 +131,8 @@ const Navbar = () => {
                 </div>
               </li>
             </ul>
-
             <button
-              className="bg-gradient-to-r from-primary to-secondary text-white px-4 py-1 rounded-full flex items-center gap-3 hover:scale-105 duration-300 relative"
+              className="bg-gradient-to-r from-primary to-secondary text-white px-4 py-1 rounded-full flex items-center gap-3 hover:scale-105 duration-300 relative toggle-cart-button"
               onClick={toggleCart}
             >
               <span className="hidden sm:block">Comprar</span>
@@ -140,8 +140,7 @@ const Navbar = () => {
               <span className="bg-rgba text-white rounded-full px-2 py-1 text-xs absolute top-2 right-0 transform translate-x-1/2 -translate-y-1/2"></span>
             </button>
             <button
-            
-              className="bg-gradient-to-r from-primary to-secondary text-white px-4 py-1 rounded-full flex items-center gap-3 hover:scale-105 duration-300"
+              className="bg-gradient-to-r from-primary to-secondary text-white px-4 py-1 rounded-full flex items-center gap-3 hover:scale-105 duration-300 toggle-login-button"
               onClick={toggleLogin}
             >
               <FaUser className="text-xl text-white drop-shadow-xl cursor-pointer" />
@@ -156,7 +155,6 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-        {/* Mobile menu section */}
         {showMobileMenu && (
           <div className="sm:hidden">
             <ul className="flex flex-col items-start gap-4 mt-4">
@@ -186,7 +184,6 @@ const Navbar = () => {
           </div>
         )}
       </div>
-      {/* modal carrito*/}
       {showCart && (
         <div
           ref={cartRef}
@@ -195,7 +192,6 @@ const Navbar = () => {
           <ShoppingCard />
         </div>
       )}
-      {/* modal login*/}
       {showLogin && (
         <div
           ref={loginRef}
