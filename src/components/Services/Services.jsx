@@ -1,4 +1,4 @@
-import Products from "./ServiceProducts";
+import ServiceProducts from "./ServiceProducts";
 
 const Services = () => {
   
@@ -16,7 +16,7 @@ const Services = () => {
               Acá podés encontrar los libros preferidos por la crítica.
             </p>
           </div>
-          <Products />
+          <ServiceProducts />
         </div>
       </div>
     </>
