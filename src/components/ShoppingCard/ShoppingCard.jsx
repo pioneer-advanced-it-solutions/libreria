@@ -13,10 +13,14 @@ const ShoppingCard = () => {
         <ul className="p-4">
           {" "}
           {cartItems.map((item, index) => (
-            <li key={index}>
-              <span>
-                {item.title} - ${item.stock}
-              </span>
+            <li className="grid grid-rows-3 grid-flow-col gap-4" key={index}>
+              <img
+                src={item.img}
+                alt={item.name}
+                className="max-w-[50px] row-span-3 ..."
+              />
+              <span className="col-span-2 ...">{item.title}</span>
+              <span className="row-span-2 col-span-2 ...">${item.stock}</span>
             </li>
           ))}
         </ul>
