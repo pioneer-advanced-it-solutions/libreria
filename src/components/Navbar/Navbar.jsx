@@ -76,7 +76,7 @@ const Navbar = () => {
   };
 
   const handleLinkClick = () => {
-    setShowMobileMenu(false); // Cierra el menú al hacer clic en un enlace
+    setShowMobileMenu(false);  //Cierra el menú al hacer clic en un enlace
   };
 
   return (
@@ -137,7 +137,9 @@ const Navbar = () => {
             >
               <span className="hidden sm:block">Comprar</span>
               <FaCartShopping className="text-xl text-white drop-shadow-sm cursor-pointer" />
-              <span className="bg-rgba text-white rounded-full px-2 py-1 text-xs absolute top-2 right-0 transform translate-x-1/2 -translate-y-1/2"></span>
+
+              <span className="bg-rgba text-white rounded-full px-2 py-1 text-xs absolute top-2 right-0 transform translate-x-1/2 -translate-y-1/2">0</span>
+              {/*TODO : cambiar el 0 por un contador */}
             </button>
             <button
               className="bg-gradient-to-r from-primary to-secondary text-white px-4 py-1 rounded-full flex items-center gap-3 hover:scale-105 duration-300 toggle-login-button"
