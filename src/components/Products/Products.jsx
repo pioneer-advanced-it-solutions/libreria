@@ -1,9 +1,9 @@
 const Products = () => {
-  return (
-    <div>
-      
-    </div>
-  )
+    return (
+        <div>
+            product listings will go here.
+        </div>
+    )
 }
 
 export default Products

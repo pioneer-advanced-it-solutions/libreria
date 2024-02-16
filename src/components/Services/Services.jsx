@@ -1,6 +1,3 @@
-// import { useEffect, useState } from "react";
-// import { FaStar } from "react-icons/fa";
-// import ServicesData from "./ServiceData";
 import Products from "./ServiceProducts";
 
 const Services = () => {
