@@ -38,8 +38,8 @@ const ShoppingCard = () => {
               </div>
             </li>
           ))}
-          <div className="grid grid-cols-4 gap-4">
-            <p className="mt-4 text-center col-span-2">Total (sin costo de envio): $ {total}</p>
+          <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
+            <p className="mt-4 text-center sm:col-span-2">Total (sin costo de envio): $ {total}</p>
             <button className="bg-primary hover:scale-105 duration-300 text-white  rounded-full mt-2 p-2 group-hover:bg-grey group-hover:text-white sm:col-span-2 sm:justify-self-end">
               Iniciar la compra
             </button>
