@@ -9,7 +9,6 @@ const ShoppingCard = () => {
     removeFromCart(index);
   };
 
-  // Calcular la suma del stock
   const total = cartItems.reduce((total, item) => total + item.price, 0);
   return (
     <div>

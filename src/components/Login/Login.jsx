@@ -7,8 +7,7 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Aquí iría la lógica de autenticación, como una llamada a la API
-    // En este ejemplo, solo simularemos un inicio de sesión exitoso si el usuario y la contraseña no están vacíos
+   {/*TO-DO :  Aquí iría la lógica de autenticación, como la llamada a la API- solo simulamos el inicio de sesión si el usuario y la contraseña no están vacíos, osea poniendo cualquier usuario*/}
     if (username.trim() !== "" && password.trim() !== "") {
       setLoggedIn(true);
     }
