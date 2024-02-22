@@ -86,7 +86,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <div>
             <Link to="/" className="flex gap-4">
-              <img src={Logo} alt="" className="w-20 object-contain	" />
+              <img src={Logo} alt="" className="w-10 object-contain	" />
               <h1 className="flex flex-col font-bold text-sm md:text-lg sm:text-sm">
                 Libreria <span>DeLaFe</span>
               </h1>
