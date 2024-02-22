@@ -22,11 +22,11 @@ const Products = () => {
 
   return (
     <div className="bg-white dark:bg-gray-900 dark:text-white">
-      <div className="max-w-2xl mx-auto pt-12 pb-2 sm:px-6 lg:px-8 ">
+      <div className="max-w-screen-lg mx-auto px-4 py-12 sm:px-6 lg:px-8 ">
         <h1
           data-aos="zoom-out"
-          data-aos-duration="500"
-          className="text-2xl sm:text-6xl lg:text-2xl font-bold text-center pt-12"
+          data-aos-duration="300"
+          className="text-lg sm:text-sm lg:text-lg font-bold text-center pt-12"
         >
           TODOS LOS LIBROS
         </h1>
