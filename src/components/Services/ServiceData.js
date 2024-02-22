@@ -16,7 +16,8 @@ const ServicesData = [
     rating: 4.4,
     showInBooks: true,
     Stock: 1,
-    price:5000,
+    price: 5000,
+    category: "Auto Ayuda",
   },
   {
     id: 2,
@@ -29,7 +30,8 @@ const ServicesData = [
     rating: 5.0,
     showInBooks: true,
     Stock: 1,
-    price:3642,
+    price: 3642,
+    category: "Ficcion",
   },
   {
     id: 3,
@@ -42,7 +44,8 @@ const ServicesData = [
     rating: 4.7,
     showInBooks: true,
     Stock: 0,
-    price:1930,
+    price: 1930,
+    category: "Accion",
   },
   {
     id: 4,
@@ -54,7 +57,8 @@ const ServicesData = [
     author: "Ken Follett",
     showInBooks: true,
     Stock: 1,
-    price:2910,
+    price: 2910,
+    category: "Accion",
   },
   {
     id: 5,
@@ -66,7 +70,8 @@ const ServicesData = [
     rating: 4.4,
     showInBooks: true,
     Stock: 1,
-    price:9000,
+    price: 9000,
+    category: "Literatura",
   },
 ];
 
