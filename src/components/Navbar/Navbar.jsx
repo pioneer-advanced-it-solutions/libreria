@@ -81,13 +81,13 @@ const Navbar = () => {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full z-50 shadow-lg bg-white dark:bg-gray-900 dark:text-white ">
+    <div className="fixed top-0 left-0 w-full z-50 shadow-lg bg-white dark:bg-gray-900 dark:text-white duration 200 ">
       <div className="container py-3 sm:py-0">
         <div className="flex justify-between items-center">
           <div>
-            <Link to="/" className="font-bold text-2xl sm:text-3xl flex gap-4">
-              <img src={Logo} alt="" className="max-w-[50px]" />
-              <h1 className="flex flex-col">
+            <Link to="/" className="flex gap-4">
+              <img src={Logo} alt="" className="w-20 object-contain	" />
+              <h1 className="flex flex-col font-bold text-sm md:text-lg sm:text-sm">
                 Libreria <span>DeLaFe</span>
               </h1>
             </Link>
@@ -115,7 +115,7 @@ const Navbar = () => {
                     <FaCaretDown className="transition duration-300 group-hover:rotate-180" />
                   </span>
                 </ul>
-                <div className="absolute -left-9 z-10 hidden group-hover:block text-black bg-white p-2 shadow-md w-[200px]">
+                <div className="absolute -left-9 z-10 hidden group-hover:block text-black bg-white p-2 shadow-md w-[300px]">
                   <ul>
                     {DropdownLinks.map((data) => (
                       <li key={data.id}>
