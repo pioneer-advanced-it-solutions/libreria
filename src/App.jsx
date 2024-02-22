@@ -34,7 +34,6 @@ const App = () => {
         <AppStoreBanner />
         <Books />
         <Testimonial />
-        <Footer />
       </div>
     </div>
   );
@@ -42,13 +41,14 @@ const App = () => {
   return (
     <div>
       <BrowserRouter>
-        <Navbar />
+      <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
           <Route path="/JuegosDidacticos" element={<GamesDidactic />} />
           <Route path="/MangaComics" element={<MangaAndComics />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );

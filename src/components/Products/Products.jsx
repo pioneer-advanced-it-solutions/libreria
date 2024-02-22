@@ -7,8 +7,14 @@ const Products = () => {
 
   return (
     <div className="bg-white dark:bg-gray-900 dark:text-white">
-      <div className="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8">
-        <h1>TODOS LOS PRODUCTOS</h1>
+      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <h1
+          data-aos="zoom-out"
+          data-aos-duration="500"
+          className="text-2xl sm:text-6xl lg:text-2xl font-bold text-center py-12"
+        >
+          TODOS LOS LIBROS
+        </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 md:gap-5 place-items-center ">
           {ServicesData.map((service) => (
             <div
