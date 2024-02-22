@@ -2,7 +2,6 @@ import { useState } from "react";
 import { FaStar } from "react-icons/fa6";
 import ServicesData from "../Services/ServiceData";
 import useCartStore from "../../Store.js";
-import { GiBlackBook } from "react-icons/gi";
 
 const Products = () => {
   const addToCart = useCartStore((state) => state.addToCart);
