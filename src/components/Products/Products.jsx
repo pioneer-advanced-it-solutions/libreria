@@ -22,7 +22,7 @@ const Products = () => {
 
   return (
     <div className="bg-white dark:bg-gray-900 dark:text-white">
-      <div className="max-w-7xl mx-auto pt-12 pb-2 sm:px-6 lg:px-8 ">
+      <div className="max-w-2xl mx-auto pt-12 pb-2 sm:px-6 lg:px-8 ">
         <h1
           data-aos="zoom-out"
           data-aos-duration="500"
