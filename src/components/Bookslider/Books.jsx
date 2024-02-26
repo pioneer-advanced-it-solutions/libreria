@@ -20,22 +20,22 @@ const Books = () => {
 
         {/* Body section */}
         <div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center gap-5 w-fit object-contain">
             {/* Card */}
             {booksToShow.map(({ id, img, title, rating, author }) => (
-              <div key={id} className="div space-y-3">
+              <div key={id} className="div space-y-3 ">
                 <img
                   src={img}
                   alt=""
-                  className="h-[220px] w-[150px] object-cover rounded-md "
+                  className="h-[220px] w-[150px] object-contain h-48 w-96 ... rounded-md "
                 />
                 <div>
-                  <h3 className="font-semibold">{title}</h3>
-                  <p className="text-sm text-gray-700 dark:text-gray-400">
+                  <h3 className="font-semibold text-center ">{title}</h3>
+                  <p className="text-sm text-gray-700 dark:text-gray-400 text-center" >
                     {author}
                   </p>
-                  <div className="flex items-center gap-1">
-                    <FaStar className="text-yellow-500" />
+                  <div className="flex items-center justify-center gap-1 content-center ">
+                    <FaStar className="text-yellow-500 " />
                     <span>{rating}</span>
                   </div>
                 </div>
