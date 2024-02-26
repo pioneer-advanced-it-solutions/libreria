@@ -14,10 +14,10 @@ const ServicesData = [
     author: "Baek Sehee",
     stars: 4,
     rating: 4.4,
-    showInBooks: true,
     Stock: 1,
     price: 5000,
     category: "Auto Ayuda",
+    showInBooks: true,
   },
   {
     id: 2,

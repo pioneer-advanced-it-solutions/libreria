@@ -13,6 +13,7 @@ import Products from "./components/Products/Products.jsx";
 import GamesDidactic from "./components/GamesDidactic/GamesDidactic.jsx";
 import MangaAndComics from "./components/MangaAndComics/MangaAndComics.jsx";
 import "aos/dist/aos.css";
+import "./App.css";
 
 const App = () => {
   React.useEffect(() => {
@@ -41,7 +42,7 @@ const App = () => {
   return (
     <div>
       <BrowserRouter>
-      <Navbar />
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
