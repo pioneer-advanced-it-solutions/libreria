@@ -30,7 +30,7 @@ const Products = () => {
         >
           TODOS LOS LIBROS
         </h1>
-        <div className="flex justify-center py-8">
+        <div className="flex justify-center py-8 ">
           <button
             onClick={() => handleFilterChange("Accion")}
             className="mx-2 p-2 rounded-md border-gray-300 dark:border-gray-600 focus:ring-primary focus:border-primary"
@@ -57,7 +57,7 @@ const Products = () => {
           </button>
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-5 place-items-center pb-8 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 md:gap-5 place-items-center pb-8 mx-5">
         {filterCategory.map((service) => (
           <div
             data-aos="zoom-in"
