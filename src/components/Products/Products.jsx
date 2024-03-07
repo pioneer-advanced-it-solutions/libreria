@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaStar } from "react-icons/fa6";
+import { FaSearchengin, FaStar } from "react-icons/fa6";
 import ServicesData from "../Services/ServiceData";
 import useCartStore from "../../Store.js";
 
@@ -30,31 +30,47 @@ const Products = () => {
         >
           TODOS LOS LIBROS
         </h1>
-        <div className="flex justify-center py-8 ">
-          <button
-            onClick={() => handleFilterChange("Accion")}
-            className="mx-2 p-2 rounded-md border-gray-300 dark:border-gray-600 focus:ring-primary focus:border-primary"
-          >
-            Accion
-          </button>
-          <button
-            onClick={() => handleFilterChange("Literatura")}
-            className="mx-2 p-2 rounded-md border-gray-300 dark:border-gray-600 focus:ring-primary focus:border-primary"
-          >
-            Literatura
-          </button>
-          <button
-            onClick={() => handleFilterChange("Ficcion")}
-            className="mx-2 p-2 rounded-md border-gray-300 dark:border-gray-600 focus:ring-primary focus:border-primary"
-          >
-            Ficcion
-          </button>
-          <button
-            onClick={() => handleFilterChange("Auto Ayuda")}
-            className="mx-2 p-2 rounded-md border-gray-300 dark:border-gray-600 focus:ring-primary focus:border-primary"
-          >
-            Auto Ayuda
-          </button>
+        <div className="grid grid-cols-1">
+          <div className="my-5">
+            <div className="flex flex-wrap justify-center sm:justify-between md:justify-center">
+              <button
+                onClick={() => handleFilterChange("Accion")}
+                className="mx-2 p-2 rounded-md border-gray-300 dark:border-gray-600 focus:ring-primary focus:border-primary"
+              >
+                Accion
+              </button>
+              <button
+                onClick={() => handleFilterChange("Literatura")}
+                className="mx-2 p-2 rounded-md border-gray-300 dark:border-gray-600 focus:ring-primary focus:border-primary"
+              >
+                Literatura
+              </button>
+              <button
+                onClick={() => handleFilterChange("Ficcion")}
+                className="mx-2 p-2 rounded-md border-gray-300 dark:border-gray-600 focus:ring-primary focus:border-primary"
+              >
+                Ficcion
+              </button>
+              <button
+                onClick={() => handleFilterChange("Auto Ayuda")}
+                className="mx-2 p-2 rounded-md border-gray-300 dark:border-gray-600 focus:ring-primary focus:border-primary"
+              >
+                Auto Ayuda
+              </button>
+            </div>
+          </div>
+          <div className="flex justify-center  ">
+            <div className="relative w-80">
+              <input
+                className="w-full pl-8 pr-4 py-2 bg-gray-200 dark:bg-gray-800 rounded-full border-gray-900 dark:border-gray-900 focus:ring-primary focus:border-primary"
+                type="search"
+                placeholder="Buscar por título o autor..."
+              />
+              <span className="absolute inset-y-0 left-3 flex items-center pr-3 text-gray-500">
+                <FaSearchengin />
+              </span>
+            </div>
+          </div>
         </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 md:gap-5 place-items-center pb-8 mx-5">
