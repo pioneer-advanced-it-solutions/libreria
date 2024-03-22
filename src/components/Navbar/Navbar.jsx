@@ -1,5 +1,5 @@
 import Logo from "../../assets/website/logo.png";
-import { FaBars, FaCaretDown } from "react-icons/fa6";
+import { FaBars, FaCaretDown, FaWhatsapp } from "react-icons/fa6";
 import { FaCartShopping } from "react-icons/fa6";
 import DarkMode from "./DarkMode";
 import { FaUser } from "react-icons/fa";
@@ -158,6 +158,13 @@ const Navbar = () => {
               </button>
             </div>
           </div>
+        </div>
+        <div className="fixed bottom-6 right-10 z-50">
+          <button>
+            <a href="https://wa.me/tunumero">
+              <FaWhatsapp className="text-6xl text-green-600 hover:text-green-600" />
+            </a>
+          </button>
         </div>
         {showMobileMenu && (
           <div className="sm:hidden">
